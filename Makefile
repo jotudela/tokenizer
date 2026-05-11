@@ -24,7 +24,27 @@ node:
 deploy: rmadrs
 	$(HARDHAT) run $(DEPLOY_SCRIPT) --network $(NETWORK)
 
-run: deploy
+
+### Mandatory Localhost && Sepolia
+run1:
+	@make deploy PART=mandatory MOD=1 NETWORK=localhost CHAINTYPE=op
+
+run2:
+	@make deploy PART=mandatory MOD=2 NETWORK=localhost CHAINTYPE=op
+
+run3:
+	@make deploy PART=mandatory MOD=1 NETWORK=sepolia CHAINTYPE=l1
+
+run4:
+	@make deploy PART=mandatory MOD=2 NETWORK=sepolia CHAINTYPE=l1
+
+
+### Bonus Localhost && Sepolia
+run5:
+	@make deploy PART=bonus NETWORK=localhost CHAINTYPE=op
+
+run6:
+	@make deploy PART=bonus NETWORK=sepolia CHAINTYPE=l1
 
 # =========================
 # CLEAN
@@ -43,6 +63,7 @@ fclean: clean rmadrs
 rmadrs:
 	@rm -f deployment/token_address.txt
 	@rm -f deployment/multisig_address.txt
+	@rm -f deployment/generated_wallets.json
 
 re: fclean install compile
 
