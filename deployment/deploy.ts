@@ -243,7 +243,7 @@ async function mandatoryLocalhost(token: any) {
         console.log("account5(5), account6(6), account7(7), account8(8), account9(9)");
         console.log("account10(10), account11(11), account12(12), account13(13), account14(14)");
         console.log("account15(15), account16(16), account17(17), account18(18), account19(19)\n\n");
-        console.log("Which acount you want to send tokens ?: ");
+        console.log("Which acount you want to see how much tokens is held ?: ");
 
         const answer = await rl.question("");
 
@@ -360,7 +360,7 @@ async function mandatorySepolia(token: any) {
         console.log("account5(5), account6(6), account7(7), account8(8), account9(9)");
         console.log("account10(10), account11(11), account12(12), account13(13), account14(14)");
         console.log("account15(15), account16(16), account17(17), account18(18), account19(19), account20(20)\n\n");
-        console.log("Which acount you want to send tokens ?: ");
+        console.log("Which acount you want to see how much tokens is held ?: ");
 
         const answer = await rl.question("");
 
@@ -677,7 +677,7 @@ async function bonusLocalhost(token: any, multisig: any) {
       console.log("account6(6), account7(7), account8(8), account9(9), account10(10)");
       console.log("account11(11), account12(12), account13(13), account14(14), account15(15)");
       console.log("account16(16), account17(17), account18(18), account19(19), account20(20)\n\n");
-      console.log("Which acount you want to see ?: ");
+      console.log("Which acount you want to see how much tokens is held ?: ");
 
       const answer = await rl.question("");
 
@@ -997,7 +997,7 @@ async function bonusSepolia(token: any, multisig: any) {
       console.log("account6(6), account7(7), account8(8), account9(9), account10(10)");
       console.log("account11(11), account12(12), account13(13), account14(14), account15(15)");
       console.log("account16(16), account17(17), account18(18), account19(19), account20(20), account21(21)\n\n");
-      console.log("Which acount you want to see ?: ");
+      console.log("Which acount you want to see how much tokens is held ?: ");
 
       const answer = await rl.question("");
 
