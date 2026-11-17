@@ -1,0 +1,15 @@
+services:
+  hardhat:
+    build: .
+    container_name: tokenizer
+    ports:
+      - "8545:8545"
+    volumes:
+      # Code source monté pour éditer sans rebuild
+      - .:/app
+      # Garde les node_modules de l'image (évite d'écraser avec ceux de l'hôte)
+      - /app/node_modules
+    env_file:
+      - .env   # SEPOLIA_RPC_URL et PRIVATE_KEY (utile seulement pour run3/4/6)
+    tty: true
+    stdin_open: true
